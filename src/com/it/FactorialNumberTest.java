@@ -8,6 +8,7 @@ public class FactorialNumberTest {
 		System.out.println(findFactorial(0));
 		System.out.println("********** Way Two *********");
 		System.out.println(factorial(10L));
+		System.out.println(newFactorial(20L));
 	}
 
 	private static int findFactorial(int number) {
@@ -20,6 +21,10 @@ public class FactorialNumberTest {
 
 	private static long factorial(long number) {
 		return LongStream.rangeClosed(1, number).reduce(1, (a, b) -> a * b);
+	}
+	
+	private static long newFactorial(long n) {
+		return LongStream.rangeClosed(1, n).reduce(1, (a,b)->a*b);
 	}
 
 }
